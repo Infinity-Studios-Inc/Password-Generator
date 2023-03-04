@@ -2,10 +2,19 @@ import random
 import string
 import pyfiglet
 import time
+import git
 from art import text2art
 from colorama import init, Fore, Back, Style
+
+#Controllo Aggiornamenti
+repo_url = "https://github.com/tuo_nome_utente/tua_repository.git"
+local_dir = "./"
+
+repo = git.Repo.clone_from(repo_url, local_dir)
+
 #Variabili
 utilizzo = None
+
 # Inizializza colorama
 init()
 
