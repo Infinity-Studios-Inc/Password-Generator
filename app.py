@@ -4,13 +4,19 @@ import pyfiglet
 import time
 import git
 from art import text2art
+from tqdm import tqdm
 from colorama import init, Fore, Back, Style
 
 #Controllo Aggiornamenti
-repo_url = "https://github.com/tuo_nome_utente/tua_repository.git"
-local_dir = "./"
+for i in tqdm(range(100)):
+    # qui inserisci il codice che viene eseguito in ogni iterazione
+    repo_url = "https://github.com/Infinity-Studios-Inc/Password-Generator/tree/main/Release"
+    local_dir = "./"
 
-repo = git.Repo.clone_from(repo_url, local_dir)
+    repo = git.Repo.clone_from(repo_url, local_dir)
+
+    repo = git.Repo(local_dir)
+    repo.git.pull()
 
 #Variabili
 utilizzo = None
